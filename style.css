@@ -1,0 +1,18 @@
+/* GitHub Profileボタンの基本スタイル */
+.btn-outline-dark {
+  border-color: #e75480; /* 通常のボーダー色 */
+  color: #e75480;        /* 通常文字色 */
+}
+
+/* ホバー時、フォーカス時、クリック時の色 */
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active,
+.btn-outline-dark.active,
+.btn-outline-dark:focus:active {
+  background-color: #e75480; /* 背景色を濃いピンクに */
+  color: #fff !important;    /* 文字色を白に */
+  border-color: #e75480 !important; /* 枠も濃いピンク */
+  text-decoration: none;     /* 下線を消す */
+  box-shadow: none;          /* デフォルトの影を消す */
+}

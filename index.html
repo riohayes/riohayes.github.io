@@ -7,6 +7,8 @@
   
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Original CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light text-dark">
 
@@ -39,10 +41,7 @@
         <!-- 所属 -->
         <h3 class="h5 mt-4" style="color: #d1477e;">所属</h3>
         <ul class="list-group mb-3">
-          <li class="list-group-item border-0 p-1" style="background-color: #fde0eb;">金沢大学 医薬保健学域 保健学類 看護学専攻</li>
-          <li class="list-group-item border-0 p-1" style="background-color: #fde0eb;">
-            <a href="https://mentalhealth.w3.kanazawa-u.ac.jp/" target="_blank">精神看護学研究室</a>
-          </li>
+          <li class="list-group-item border-0 p-1" style="background-color: #fde0eb;">金沢大学 医薬保健学域 保健学類 看護学専攻 （精神看護学研究室）</li>
         </ul>
 
         <!-- 経歴 -->
@@ -75,12 +74,14 @@
     <!-- Links -->
     <section id="links">
       <h2 class="mb-3" style="color: #e75480;">Links</h2>
-      <ul class="list-unstyled">
-        <li>
-          <a href="https://github.com/riohayes" target="_blank" class="btn btn-outline-dark" 
-             style="border-color: #e75480; color: #e75480;">GitHub Profile</a>
-        </li>
-      </ul>
+      <div class="d-flex gap-3">
+        <a href="https://github.com/riohayes" target="_blank" class="btn btn-outline-dark">
+          GitHub Profile
+        </a>
+        <a href="https://mentalhealth.w3.kanazawa-u.ac.jp/" target="_blank" class="btn btn-outline-dark">
+          金沢大学 精神看護学研究室
+        </a>
+      </div>
     </section>
 
   </main>
