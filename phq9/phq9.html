@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Health Questionnaire-9 (PHQ-9)</title>
+  <link href="../style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+
+<header class="text-white text-center py-5 mb-5" style="background-color: #e56a8f;">
+  <h1 class="display-4">Patient Health Questionnaire-9 (PHQ-9)</h1>
+  <p class="lead">
+    このツールは、Patient Health Questionnaire-9 (PHQ-9) を基にした簡易メンタルヘルス評価ツールです。<br>
+    ユーザーは過去2週間の気分や活動状況に関する9つの質問に回答することで、簡易的な抑うつ症状の評価が行えます。<br><br>
+    ※このツールはあくまで参考用の自己評価であり、診断を行うものではありません。<br>
+    精神的な不調や気になる症状がある場合は、必ず医療機関や専門家に相談してください。
+  </p>
+</header>
+
+<main class="container mb-5">
+
+<form id="phq9-form">
+  <ol>
+    <li class="mb-3">
+      <label>最近2週間、ほとんど毎日、何もする気が起きなかったり、楽しめなかったことがありますか？</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" id="q1-0" value="0" checked>
+        <label class="form-check-label" for="q1-0">なし</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" id="q1-1" value="1">
+        <label class="form-check-label" for="q1-1">数日間</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" id="q1-2" value="2">
+        <label class="form-check-label" for="q1-2">1週間以上</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" id="q1-3" value="3">
+        <label class="form-check-label" for="q1-3">ほとんど毎日</label>
+      </div>
+    </li>
+
+    <li class="mb-3">
+      <label>最近2週間、落ち込んだり、気分が沈んでいることがありましたか？</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" id="q2-0" value="0" checked>
+        <label class="form-check-label" for="q2-0">なし</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" id="q2-1" value="1">
+        <label class="form-check-label" for="q2-1">数日間</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" id="q2-2" value="2">
+        <label class="form-check-label" for="q2-2">1週間以上</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" id="q2-3" value="3">
+        <label class="form-check-label" for="q2-3">ほとんど毎日</label>
+      </div>
+    </li>
+
+    <li class="mb-3">
+      <label>最近2週間、眠れなかったり、眠りすぎたりすることがありましたか？</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" id="q3-0" value="0" checked>
+        <label class="form-check-label" for="q3-0">なし</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" id="q3-1" value="1">
+        <label class="form-check-label" for="q3-1">数日間</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" id="q3-2" value="2">
+        <label class="form-check-label" for="q3-2">1週間以上</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" id="q3-3" value="3">
+        <label class="form-check-label" for="q3-3">ほとんど毎日</label>
+      </div>
+    </li>
+
+    <li class="mb-3">
+      <label>最近2週間、気分が落ち着かず、イライラしたり、集中できないことがありましたか？</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" id="q4-0" value="0" checked>
+        <label class="form-check-label" for="q4-0">なし</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" id="q4-1" value="1">
+        <label class="form-check-label" for="q4-1">数日間</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" id="q4-2" value="2">
+        <label class="form-check-label" for="q4-2">1週間以上</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" id="q4-3" value="3">
+        <label class="form-check-label" for="q4-3">ほとんど毎日</label>
+      </div>
+    </li>
+
+    <li class="mb-3">
+      <label>最近2週間、食欲がなかったり、過食することがありましたか？</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" id="q5-0" value="0" checked>
+        <label class="form-check-label" for="q5-0">なし</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" id="q5-1" value="1">
+        <label class="form-check-label" for="q5-1">数日間</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" id="q5-2" value="2">
+        <label class="form-check-label" for="q5-2">1週間以上</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" id="q5-3" value="3">
+        <label class="form-check-label" for="q5-3">ほとんど毎日</label>
+      </div>
+    </li>
+
+    <li class="mb-3">
+      <label>最近2週間、自己評価が低くなったり、自分を責めることがありましたか？</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" id="q6-0" value="0" checked>
+        <label class="form-check-label" for="q6-0">なし</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" id="q6-1" value="1">
+        <label class="form-check-label" for="q6-1">数日間</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" id="q6-2" value="2">
+        <label class="form-check-label" for="q6-2">1週間以上</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" id="q6-3" value="3">
+        <label class="form-check-label" for="q6-3">ほとんど毎日</label>
+      </div>
+    </li>
+
+    <li class="mb-3">
+      <label>最近2週間、動作が遅くなったり、逆にそわそわ落ち着かないことがありましたか？</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" id="q7-0" value="0" checked>
+        <label class="form-check-label" for="q7-0">なし</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" id="q7-1" value="1">
+        <label class="form-check-label" for="q7-1">数日間</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" id="q7-2" value="2">
+        <label class="form-check-label" for="q7-2">1週間以上</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" id="q7-3" value="3">
+        <label class="form-check-label" for="q7-3">ほとんど毎日</label>
+      </div>
+    </li>
+
+    <li class="mb-3">
+      <label>最近2週間、何もやる気が起きず、集中力が続かないことがありましたか？</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" id="q8-0" value="0" checked>
+        <label class="form-check-label" for="q8-0">なし</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" id="q8-1" value="1">
+        <label class="form-check-label" for="q8-1">数日間</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" id="q8-2" value="2">
+        <label class="form-check-label" for="q8-2">1週間以上</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" id="q8-3" value="3">
+        <label class="form-check-label" for="q8-3">ほとんど毎日</label>
+      </div>
+    </li>
+
+    <li class="mb-3">
+      <label>最近2週間、死にたいと思ったことや自分を傷つけたくなることがありましたか？</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" id="q9-0" value="0" checked>
+        <label class="form-check-label" for="q9-0">なし</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" id="q9-1" value="1">
+        <label class="form-check-label" for="q9-1">数日間</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" id="q9-2" value="2">
+        <label class="form-check-label" for="q9-2">1週間以上</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" id="q9-3" value="3">
+        <label class="form-check-label" for="q9-3">ほとんど毎日</label>
+      </div>
+    </li>
+  </ol>
+
+  <button type="button" class="btn-pink" onclick="calculatePHQ9()">判定する</button>
+</form>
+
+<div id="result" class="mt-4 p-3" style="background-color: #fde0eb; display:none;"></div>
+
+
+</main>
+
+<footer class="text-white text-center py-3 mt-5" style="background-color: #e56a8f;">
+  <p class="mb-0">&copy; 2025 riohayes</p>
+</footer>
+
+<script>
+function calculatePHQ9() {
+  const form = document.getElementById('phq9-form');
+  let total = 0;
+  for (let i = 1; i <= 9; i++) { // Q1〜Q9 全問
+    total += parseInt(form['q'+i].value);
+  }
+
+  let evaluation = '';
+  if (total <= 4) evaluation = '正常〜軽度';
+  else if (total <= 9) evaluation = '軽度の抑うつ';
+  else if (total <= 14) evaluation = '中等度の抑うつ';
+  else if (total <= 19) evaluation = '中等度〜重度の抑うつ';
+  else evaluation = '重度の抑うつ';
+
+  const resultDiv = document.getElementById('result');
+  resultDiv.style.display = 'block';
+  resultDiv.innerHTML = `<h5>合計点: ${total}</h5><p>判定: ${evaluation}</p>`;
+}
+</script>
+
+</body>
+</html>
