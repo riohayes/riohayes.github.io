@@ -1,3 +1,45 @@
+/* 波打つパステルカラー背景アニメーション */
+body.animated-bg {
+  position: relative;
+  overflow-x: hidden;
+  background: #f0f8ff;
+}
+
+body.animated-bg::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, #FFB6D9 0%, #FFD4A3 20%, #FFFACD 40%, #B4E7B4 60%, #ADD8E6 80%, #DDA0DD 100%),
+    linear-gradient(-45deg, #FFD4A3 0%, #FFFACD 20%, #B4E7B4 40%, #ADD8E6 60%, #DDA0DD 80%, #FFB6D9 100%),
+    linear-gradient(90deg, #B4E7B4 0%, #ADD8E6 25%, #DDA0DD 50%, #FFB6D9 75%, #FFD4A3 100%);
+  background-size: 200% 200%;
+  animation: wave-animation 15s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0% 50%, 100% 50%, 0% 100%;
+  }
+  25% {
+    background-position: 50% 0%, 50% 100%, 25% 50%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 50%, 50% 0%;
+  }
+  75% {
+    background-position: 50% 100%, 50% 0%, 75% 50%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, 0% 100%;
+  }
+}
+
 /* ライトピンクテーマボタン */
 .btn-pink {
   background-color: #f8f9fa; /* ページの背景色（薄いグレー） */
